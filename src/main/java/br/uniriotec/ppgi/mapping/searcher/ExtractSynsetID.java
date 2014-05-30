@@ -24,6 +24,13 @@ public class ExtractSynsetID {
 		List<String> listaModifiers = new ArrayList<String>();
 		listaModifiers.add("Extraterrestrial Object");
 		listaModifiers.add("Celestial Body");
+		listaModifiers.add("flora");
+		listaModifiers.add("Natural object");
+		listaModifiers.add("Substance");
+		listaModifiers.add("Relative");
+		listaModifiers.add("Parent");
+		listaModifiers.add("Social Group");
+		listaModifiers.add("Time Period");
 		
 		
 		//Instanciar Dicionario
