@@ -31,6 +31,9 @@ public class ExtractSynsetID {
 		listaModifiers.add("Parent");
 		listaModifiers.add("Social Group");
 		listaModifiers.add("Time Period");
+		listaModifiers.add("Green Goods");
+		listaModifiers.add("Meat");
+		listaModifiers.add("Food Product");
 		
 		
 		//Instanciar Dicionario
