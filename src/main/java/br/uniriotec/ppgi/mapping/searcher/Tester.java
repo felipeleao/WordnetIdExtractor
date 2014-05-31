@@ -13,30 +13,12 @@ import edu.mit.jwi.item.IWord;
 import edu.mit.jwi.item.IWordID;
 import edu.mit.jwi.item.POS;
 
-public class ExtractSynsetID {
+public class Tester {
 	private static IDictionary dict = null;
-	/**
-	 * @param args
-	 * @throws IOException 
-	 */
+
 	public static void main(String[] args) throws IOException {
-		
 		List<String> listaModifiers = new ArrayList<String>();
-		listaModifiers.add("Extraterrestrial Object");
-		listaModifiers.add("Celestial Body");
-		listaModifiers.add("flora");
-		listaModifiers.add("Natural object");
-		listaModifiers.add("Substance");
-		listaModifiers.add("Relative");
-		listaModifiers.add("Parent");
-		listaModifiers.add("Social Group");
-		listaModifiers.add("Time Period");
-		listaModifiers.add("Green Goods");
-		listaModifiers.add("Meat");
-		listaModifiers.add("Food Product");
-		listaModifiers.add("Linguistic Unit");
-		listaModifiers.add("Linguistic Communication");
-		listaModifiers.add("Speech Act");
+		listaModifiers.add("Question");
 		
 		
 		//Instanciar Dicionario
@@ -48,19 +30,15 @@ public class ExtractSynsetID {
 			IIndexWord idxWord = dict.getIndexWord(termo, POS.NOUN); 
 			for(IWordID wordID : idxWord.getWordIDs()){
 				IWord word = dict.getWord(wordID);
-				System.out.println(word.getSynset());
+				System.out.println(word.getSynset() + " --> "+word.getSynset().getLexicalFile());
 			}
 			System.out.println("----");
 		}
-		
-		
+
 	}
 	
 	
-	
-	
-	
-	
+
 	
 	public static IDictionary dicitionaryFactory() throws IOException{
 		if(dict == null){
@@ -75,7 +53,5 @@ public class ExtractSynsetID {
 		}
 		return dict;
 	}
-	
-
 
 }
